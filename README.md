@@ -19,7 +19,9 @@ docker run -d -p 22 -p 8787 angelrr7702/rstudio
 and need to log in to the container by ssh (root:rootprovisional) and them :
 
 passwd ????? ==> to change root password
+
 adduser ????? ==> to add user to the RStudio server
+
 exit
 
 example : www.quantumobject.com:49176 login: guest password: guest
