@@ -16,6 +16,7 @@ RStudio to work with R Statistical Computing
 To make it work :
 
 docker run -d -p 22 -p 8787 angelrr7702/rstudio
+
 web brownser to ip:port and login/password will be guest/guest
 
 
