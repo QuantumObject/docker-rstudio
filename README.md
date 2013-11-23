@@ -19,6 +19,7 @@ docker run -d -p 22 -p 8787 angelrr7702/rstudio
 and need to log in to the container by ssh (root:rootprovisional) and them :
 
 passwd ????? ==> to change root password
+
 passwd guest ==> to change guest password or you can remove by :  deluser guest
 
 adduser ????? ==> to add user to the RStudio server
