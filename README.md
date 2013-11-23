@@ -4,9 +4,13 @@ rstudio
 Dockerfile to be use to build image for docker container with ubuntu 13.10 plus sshd service and RStudio
 
 angelrr7702/rstudio
+
 Short Description
+
 Rstudio server v0.97.551
+
 RStudio to work with R Statistical Computing
+
 R version 3.0.2
 
 Full Description
