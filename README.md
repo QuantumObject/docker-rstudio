@@ -16,6 +16,10 @@ RStudio to work with R Statistical Computing
 To make it work :
 
 docker run -d -p 22 -p 8787 angelrr7702/rstudio
+web brownser to ip:port and login/password will be guest/guest
+
+
+To configured it :
 
 and need to log in to the container by ssh (root:rootprovisional) and them :
 
@@ -26,6 +30,11 @@ passwd guest ==> to change guest password or you can remove by :  deluser guest
 adduser ????? ==> to add user to the RStudio server
 
 exit
+
+
+you can check http://www.rstudio.com/ide/docs/server/getting_started for more info about Rstudio
+
+
 
 example : rstudio.quantumobject.com login: guest password: guest
 
