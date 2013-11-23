@@ -32,6 +32,6 @@ adduser ????? ==> to add user to the RStudio server
 
 exit
 
-example : www.quantumobject.com:49176 login: guest password: guest
+example : rstudio.quantumobject.com login: guest password: guest
 
 note : it was created by using angelrr7702/ubuntu-13.10-sshd and installing the package R and Rstudio server from rstudio.com
