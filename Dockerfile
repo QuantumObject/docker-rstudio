@@ -1,4 +1,4 @@
-# ubuntu-13.10
+# rstudio container
 # VERSION               0.0.2
 
 FROM angelrr7702/ubuntu-13.10-sshd
