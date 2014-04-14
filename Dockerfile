@@ -1,5 +1,5 @@
 # rstudio container
-# VERSION               0.0.4
+# VERSION               0.1.0
 FROM angelrr7702/ubuntu-13.10-sshd
 MAINTAINER Angel Rodriguez  "angelrr7702@gmail.com"
 RUN echo "deb http://archive.ubuntu.com/ubuntu saucy-backports main restricted universe" >> /etc/apt/sources.list
