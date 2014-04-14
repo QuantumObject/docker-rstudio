@@ -37,6 +37,6 @@ you can check http://www.rstudio.com/ide/docs/server/getting_started for more in
 
 
 
-example : rstudio.quantumobject.com login: guest password: guest
+example : rstudio.quantumobject.com
 
 note : it was created by using angelrr7702/ubuntu-13.10-sshd and installing the package R and Rstudio server from rstudio.com
