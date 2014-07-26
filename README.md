@@ -1,13 +1,13 @@
 rstudio container
 =================
 
-Dockerfile to be use to build image for docker container with ubuntu 13.10 plus sshd service and RStudio
+Dockerfile to be use to build image for docker container with ubuntu 14.04 plus sshd service and RStudio
 
 angelrr7702/rstudio
 Short Description:
-Rstudio server v0.97.551.
+Rstudio server v0.98.551.
 RStudio to work with R Statistical Computing.
-R version 3.0.2
+R version 3.1.1
 
 
 Full Description:
@@ -39,4 +39,4 @@ you can check http://www.rstudio.com/ide/docs/server/getting_started for more in
 
 example : rstudio.quantumobject.com
 
-note : it was created by using angelrr7702/ubuntu-13.10-sshd and installing the package R and Rstudio server from rstudio.com
+note : it was created by using angelrr7702/docker-ubuntu-14.04-sshd and installing the package R and Rstudio server from rstudio.com
