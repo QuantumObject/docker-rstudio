@@ -63,7 +63,7 @@ RUN (adduser --disabled-password --gecos "" guest && echo "guest:guest"|chpasswd
 EXPOSE 8787
 
 #creatian of volume
-VOLUME
+#VOLUME
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
