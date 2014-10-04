@@ -5,7 +5,7 @@ Dockerfile to be use to build image for docker container with docker-baseimage a
 
 quantumobject/docker-rstudio
 Short Description:
-Rstudio server v0.98.978
+Rstudio server v0.98.994
 RStudio to work with R Statistical Computing.
 R version 3.1.1
 
