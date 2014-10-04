@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y -q r-base \
                                               r-base-dev \
                                               gdebi-core \
                                               libapparmor1  \
-                                              supervisor \
+                                              sudo \
                                               libcurl4-openssl-dev \
                   && apt-get clean \
                   && rm -rf /tmp/* /var/tmp/* \
