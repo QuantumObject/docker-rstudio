@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y -q r-base \
                                               libapparmor1  \
                                               sudo \
                                               libcurl4-openssl-dev \
+                                              libssl0.9.8 \
                   && apt-get clean \
                   && rm -rf /tmp/* /var/tmp/* \
                   && rm -rf /var/lib/apt/lists/*
