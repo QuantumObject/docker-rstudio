@@ -1,4 +1,3 @@
-
 #!/bin/sh
 ### In rserver.sh (make sure this file is chmod +x):
 # `/sbin/setuser xxxx` runs the given command as the user `xxxx`.
