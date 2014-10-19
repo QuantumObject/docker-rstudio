@@ -22,7 +22,9 @@ web brownser to ip:port and login/password will be guest/guest
 
 To configured it :
 
-You can use docker-bash id-container to access it and them :
+To access it and configured the container :
+
+docker exec -it container-id /bin/bash
 
 passwd guest ==> to change guest password or you can remove by :  deluser guest
 
@@ -31,6 +33,6 @@ adduser ????? ==> to add user to the RStudio server
 exit
 
 
-you can check http://www.rstudio.com/ide/docs/server/getting_started for more info about Rstudio
+you can check [http://www.rstudio.com/ide/docs/server/getting_started](http://www.rstudio.com/ide/docs/server/getting_started) for more info about Rstudio
 
-example : www.quantumobject.com ==> Rstudio tab ..
+example : [www.quantumobject.com](www.quantumobject.com) ==> Rstudio tab ..
