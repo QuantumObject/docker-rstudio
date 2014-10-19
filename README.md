@@ -35,4 +35,4 @@ exit
 
 you can check [http://www.rstudio.com/ide/docs/server/getting_started](http://www.rstudio.com/ide/docs/server/getting_started) for more info about Rstudio
 
-example : [www.quantumobject.com](www.quantumobject.com) ==> Rstudio tab ..
+example : [http://www.quantumobject.com](http://www.quantumobject.com) ==> Rstudio tab ..
