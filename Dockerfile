@@ -1,15 +1,12 @@
 #name of container: docker-rstudio
-#versison of container: 0.5.6
+#versison of container: 0.5.7
 FROM quantumobject/docker-baseimage
 MAINTAINER Angel Rodriguez "angel@quantumobject.com"
 
-# Set correct environment variables.
-ENV HOME /root
-
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN echo "deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe" >> /etc/apt/sources.list
-RUN (echo "deb http://cran.mtu.edu/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9)
+RUN echo "deb http://archive.ubuntu.com/ubuntu utopic-backports main restricted universe" >> /etc/apt/sources.list
+RUN (echo "deb http://cran.mtu.edu/bin/linux/ubuntu utopic/" >> /etc/apt/sources.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9)
 RUN apt-get update && apt-get install -y -q r-base \
                                               r-base-dev \
                                               gdebi-core \
@@ -22,9 +19,9 @@ RUN apt-get update && apt-get install -y -q r-base \
                   && rm -rf /var/lib/apt/lists/*
                   
 RUN update-locale
-RUN wget http://download2.rstudio.org/rstudio-server-0.98.1091-amd64.deb \
-                                              && gdebi -n rstudio-server-0.98.1091-amd64.deb \
-                                              && rm /rstudio-server-0.98.1091-amd64.deb
+RUN wget http://download2.rstudio.org/rstudio-server-0.98.1102-amd64.deb \
+                                              && gdebi -n rstudio-server-0.98.1102-amd64.deb \
+                                              && rm /rstudio-server-0.98.1102-amd64.deb
     
 ##startup scripts
 #Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't
