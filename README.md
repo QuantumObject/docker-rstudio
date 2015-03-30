@@ -1,38 +1,68 @@
-rstudio container
-=================
+# docker-rstudio
 
-Dockerfile to be use to build image for docker container with docker-baseimage and RStudio
+Docker container for [RStudio Server 0.98.1103][3] with [R 3.1.3][8]
 
-quantumobject/docker-rstudio
-Short Description:
-Rstudio server v0.98.1102
-RStudio to work with R Statistical Computing.
-R version 3.1.2
+"RStudio is an integrated development environment for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management."
 
+## Install dependencies
 
-Full Description:
-RStudio to work with R Statistical Computing
+  - [Docker][2]
 
-To make it work :
+To install docker in Ubuntu 14.04 use the commands:
 
-docker run -d -p 8787 quantumobject/docker-rstudio
+    $ sudo apt-get update
+    $ sudo apt-get install docker.io
 
-web brownser to ip:port and login/password will be guest/guest
+ To install docker in other operating systems check [docker online documentation][4]
 
+## Usage
 
-To configured it :
+To run container use the command below:
+
+    $ docker run -d -p 8787:8787 quantumobject/docker-rstudio
+
+This will create docker-rstudio container with login/password guest/guest.
 
 To access it and configured the container :
 
-docker exec -it container-id /bin/bash
+    $ docker exec -it container-id /bin/bash
 
-passwd guest ==> to change guest password or you can remove by :  deluser guest
+Them to change guest password :
 
-adduser ????? ==> to add user to the RStudio server
+    $ passwd guest
+    $ exit
 
-exit
+or you can remove guest user and create a new user:
 
+    $ deluser guest
+    $ adduser new_user
+    $ exit
+    
+In the same way you can add additional users without deleting other users. 
 
-you can check [http://www.rstudio.com/ide/docs/server/getting_started](http://www.rstudio.com/ide/docs/server/getting_started) for more info about Rstudio
+## Accessing the RStudio Server applications:
 
-example : [http://www.quantumobject.com](http://www.quantumobject.com) ==> Container ==> Rstudio
+After that check with your browser at addresses plus the port 8787:
+
+  - **http://host_ip:8787/**
+
+note : It was created by using quantumobject/docker-baseimage and installing the package R and RStudio Server from rstudio.com . RStudio is a trademark of RStudio, Inc.
+
+## More Info
+
+About RStudio Server[www.rstudio.com][1]
+
+To help improve this container [docker-rstudio][5]
+
+RStudio Server [Documentation][6]
+
+Example of [RStudio Server][7]
+
+[1]:http://www.rstudio.com
+[2]:https://www.docker.com
+[3]:http://www.rstudio.com/products/rstudio/download-server
+[4]:http://docs.docker.com
+[5]:https://github.com/QuantumObject/docker-rstudio
+[6]:https://support.rstudio.com/hc/en-us/categories/200035113-Documentation
+[7]:http://www.quantumobject.com:8787
+[8]:http://www.r-project.org
