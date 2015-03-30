@@ -46,6 +46,8 @@ After that check with your browser at addresses plus the port 8787:
 
   - **http://host_ip:8787/**
 
+note : It was created by using quantumobject/docker-baseimage and installing the package R and RStudio Server from rstudio.com . RStudio is a trademark of RStudio, Inc.
+
 ## More Info
 
 About RStudio Server[www.rstudio.com][1]
