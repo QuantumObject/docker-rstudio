@@ -1,6 +1,6 @@
 # docker-rstudio
 
-Docker container for [RStudio Server 0.99.467][3] with [R 3.2.1][8]
+Docker container for [RStudio Server 0.99.486][3] with [R 3.2.2][8]
 
 "RStudio is an integrated development environment for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management."
 
@@ -58,6 +58,8 @@ RStudio Server [Documentation][6]
 
 Example of [RStudio Server][7]
 
+For additional info about us and our projects check our site [www.quantumobject.com][9]
+
 [1]:http://www.rstudio.com
 [2]:https://www.docker.com
 [3]:http://www.rstudio.com/products/rstudio/download-server
@@ -66,3 +68,4 @@ Example of [RStudio Server][7]
 [6]:https://support.rstudio.com/hc/en-us/categories/200035113-Documentation
 [7]:http://www.quantumobject.com:8787
 [8]:http://www.r-project.org
+[9]:http://www.quantumobject.com
