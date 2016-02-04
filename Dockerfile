@@ -19,9 +19,9 @@ RUN apt-get update && apt-get install -y -q r-base \
                   && rm -rf /var/lib/apt/lists/*
                   
 RUN update-locale
-RUN wget http://download2.rstudio.org/rstudio-server-0.99.486-amd64.deb \
-                                              && gdebi -n rstudio-server-0.99.486-amd64.deb \
-                                              && rm /rstudio-server-0.99.486-amd64.deb
+RUN wget http://download2.rstudio.org/rstudio-server-0.99.491-amd64.deb \
+                                              && gdebi -n rstudio-server-0.99.491-amd64.deb \
+                                              && rm /rstudio-server-0.99.491-amd64.deb
     
 ##startup scripts
 #Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't
@@ -34,15 +34,6 @@ RUN chmod +x /etc/my_init.d/startup.sh
 RUN mkdir /etc/service/rserver
 COPY rserver.sh /etc/service/rserver/run
 RUN chmod +x /etc/service/rserver/run
-
-
-#pre-config scritp for different service that need to be run when container image is create
-#maybe include additional software that need to be installed ... with some service running ... like example mysqld
-COPY pre-conf.sh /sbin/pre-conf
-RUN chmod +x /sbin/pre-conf \
-&& /bin/bash -c /sbin/pre-conf \
-&& rm /sbin/pre-conf
-
 
 #backup or keep data integrity ..
 ##scritp that can be running from the outside using docker-bash tool ...
@@ -60,9 +51,5 @@ RUN (adduser --disabled-password --gecos "" guest && echo "guest:guest"|chpasswd
 # at that ports need to allow access from firewall if need to access it outside of the server.
 EXPOSE 8787
 
-#creatian of volume
-#VOLUME
-
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
-
