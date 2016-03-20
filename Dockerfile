@@ -37,7 +37,7 @@ COPY rserver.sh /etc/service/rserver/run
 COPY rserver-log.sh /etc/service/rserver/log/run
 RUN chmod +x /etc/service/rserver/run /etc/service/rserver/log/run \
     && cp /var/log/cron/config /var/log/rserver/ \
-    && chown -R rstudio-server /var/log/shiny-server
+    && chown -R rstudio-server /var/log/rserver
 
 #add files and script that need to be use for this container
 #include conf file relate to service/daemon
