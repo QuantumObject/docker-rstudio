@@ -1,6 +1,6 @@
 #name of container: docker-rstudio
-#versison of container: 0.6.1
-FROM quantumobject/docker-baseimage:15.04
+#versison of container: 0.6.2
+FROM quantumobject/docker-baseimage:16.04
 MAINTAINER Angel Rodriguez "angel@quantumobject.com"
 
 #add repository and update the container
@@ -13,15 +13,15 @@ RUN apt-get update && apt-get install -y -q r-base \
                                               libapparmor1  \
                                               sudo \
                                               libcurl4-openssl-dev \
-                                              libssl0.9.8 \
+                                              libssl1.0.0 \
                   && apt-get clean \
                   && rm -rf /tmp/* /var/tmp/* \
                   && rm -rf /var/lib/apt/lists/*
                   
 RUN update-locale
-RUN wget http://download2.rstudio.org/rstudio-server-0.99.893-amd64.deb \
-                                              && gdebi -n rstudio-server-0.99.893-amd64.deb \
-                                              && rm /rstudio-server-0.99.893-amd64.deb
+RUN wget http://download2.rstudio.org/rstudio-server-1.0.44-amd64.deb \
+                                              && gdebi -n rstudio-server-1.0.44-amd64.deb \
+                                              && rm /rstudio-server-1.0.44-amd64.deb
     
 ##startup scripts
 #Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't
@@ -32,10 +32,8 @@ RUN chmod +x /etc/my_init.d/startup.sh
 
 ##Adding Deamons to containers
 RUN mkdir /etc/service/rserver /var/log/rserver ; sync
-RUN mkdir /etc/service/rserver/log
 COPY rserver.sh /etc/service/rserver/run
-COPY rserver-log.sh /etc/service/rserver/log/run
-RUN chmod +x /etc/service/rserver/run /etc/service/rserver/log/run \
+RUN chmod +x /etc/service/rserver/run \
     && cp /var/log/cron/config /var/log/rserver/ \
     && chown -R rstudio-server /var/log/rserver
 
