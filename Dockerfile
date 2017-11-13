@@ -1,11 +1,10 @@
 #name of container: docker-rstudio
-#versison of container: 0.6.2
+#versison of container: 0.6.3
 FROM quantumobject/docker-baseimage:16.04
 MAINTAINER Angel Rodriguez "angel@quantumobject.com"
 
-#add repository and update the container
-#Installation of nesesary package/software for this containers...
-RUN echo "deb http://archive.ubuntu.com/ubuntu `cat /etc/container_environment/DISTRIB_CODENAME`-backports main restricted universe" >> /etc/apt/sources.list
+# Update the container
+# Installation of nesesary package/software for this containers...
 RUN (echo "deb http://cran.mtu.edu/bin/linux/ubuntu `cat /etc/container_environment/DISTRIB_CODENAME`/" >> /etc/apt/sources.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9)
 RUN apt-get update && apt-get install -y -q r-base \
                                               r-base-dev \
@@ -19,9 +18,9 @@ RUN apt-get update && apt-get install -y -q r-base \
                   && rm -rf /var/lib/apt/lists/*
                   
 RUN update-locale
-RUN wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-1.1.271-amd64.deb \
-                                              && gdebi -n rstudio-server-1.1.271-amd64.deb \
-                                              && rm /rstudio-server-1.1.271-amd64.deb
+RUN wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb \
+                                              && gdebi -n rstudio-server-1.1.383-amd64.deb \
+                                              && rm /rstudio-server-1.1.383-amd64.deb
     
 ##startup scripts
 #Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't
