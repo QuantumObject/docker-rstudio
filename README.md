@@ -1,6 +1,6 @@
 # docker-rstudio
 
-Docker container for [RStudio Server 1.1.271][3] with [R 3.4.0][8]
+Docker container for [RStudio Server 1.1.383][3] with [R 3.4.3][8]
 
 "RStudio is an integrated development environment for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management."
 
@@ -8,10 +8,10 @@ Docker container for [RStudio Server 1.1.271][3] with [R 3.4.0][8]
 
   - [Docker][2]
 
-To install docker in Ubuntu 14.04 use the commands:
+To install docker in Ubuntu 16.04 use the commands:
 
     $ sudo apt-get update
-    $ wget -qO- https://get.docker.com/ | sh
+    $ sudo wget -qO- https://get.docker.com/ | sh
 
  To install docker in other operating systems check [docker online documentation][4]
 
