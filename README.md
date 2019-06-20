@@ -1,6 +1,6 @@
 # docker-rstudio
 
-Docker container for [RStudio Server 1.1.456][3] with [R 3.4.4][8]
+Docker container for [RStudio Server 1.2.1335][3] with [R 3.4.4][8]
 
 "RStudio is an integrated development environment for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management."
 
