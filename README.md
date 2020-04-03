@@ -19,7 +19,7 @@ To install docker in Ubuntu 18.04 use the commands:
 
 To run container use the command below:
 
-    $ docker run -d -p 8787:8787 quantumobject/docker-rstudio
+    $ docker run -d -p 8787:8787 --name rstudio quantumobject/docker-rstudio
 
 This will create docker-rstudio container with login/password guest/guest.
 
