@@ -1,6 +1,6 @@
 #name of container: docker-rstudio
-#versison of container: 0.6.6
-FROM quantumobject/docker-baseimage:19.04
+#versison of container: 0.7
+FROM quantumobject/docker-baseimage:20.04
 MAINTAINER Angel Rodriguez "angel@quantumobject.com"
 
 # Update the container
@@ -18,9 +18,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-
                   && rm -rf /var/lib/apt/lists/*
                   
 RUN update-locale
-RUN wget  https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5033-amd64.deb \
-                                              && gdebi -n rstudio-server-1.2.5033-amd64.deb \
-                                              && rm /rstudio-server-1.2.5033-amd64.deb
+RUN wget  https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.959-amd64.deb \
+                                              && gdebi -n rstudio-server-1.3.959-amd64.deb \
+                                              && rm /rstudio-server-1.3.959-amd64.deb
     
 ##startup scripts
 #Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't
