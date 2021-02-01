@@ -12,6 +12,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-
                                               sudo \
                                               libcurl4-openssl-dev \
                                               libssl1.1 \
+                                              libpq5 \
                                               libclang-dev \
                   && apt-get clean \
                   && rm -rf /tmp/* /var/tmp/* \
