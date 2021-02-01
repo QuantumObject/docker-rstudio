@@ -19,7 +19,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-
                   
 RUN update-locale
 RUN wget  https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1103-amd64.deb \
-                                              && gdebi -n rstudio-server-1.4.1103-amd64.deb \
+                                              && dpkg -i --force-depends rstudio-server-1.4.1103-amd64.deb \
                                               && rm /rstudio-server-1.4.1103-amd64.deb
     
 ##startup scripts
