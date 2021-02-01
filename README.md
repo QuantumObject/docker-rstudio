@@ -1,6 +1,6 @@
 # docker-rstudio
 
-Docker container for [RStudio Server 1.3.959][3] with [R 3.6.3][8]
+Docker container for [RStudio Server 1.4.1103][3] with [R 3.6.3][8]
 
 "RStudio is an integrated development environment for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management."
 
@@ -8,7 +8,7 @@ Docker container for [RStudio Server 1.3.959][3] with [R 3.6.3][8]
 
   - [Docker][2]
 
-To install docker in Ubuntu 18.04 use the commands:
+To install docker in Ubuntu 20.04 use the commands:
 
     $ sudo apt-get update
     $ sudo wget -qO- https://get.docker.com/ | sh
